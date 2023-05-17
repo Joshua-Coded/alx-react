@@ -1,0 +1,13 @@
+.Notifications {
+    padding: 2rem;
+    border: 2px solid red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li[data="default"] {
+    color: blue;
+}
+
+ul li[data="urgent"] {
+    color: red;
+}
