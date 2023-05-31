@@ -1,59 +1,56 @@
 {
-  "name": "dashboard",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.7.1",
-    "aphrodite": "^2.4.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^5.0.2",
-    "file-loader": "^6.2.0",
-    "image-webpack-loader": "^7.0.1",
-    "jest": "^26.6.3",
-    "prop-types": "^15.8.1",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "style-loader": "^2.0.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/preset-env": "^7.12.16",
-    "@babel/preset-react": "^7.12.13",
-    "babel-jest": "^28.1.0",
-    "babel-loader": "^8.2.2",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "webpack": "^5.22.0",
-    "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
-  },
-  "scripts": {
-    "build": "webpack --mode production --config config/webpack.config.js",
-    "start": "webpack serve --open --mode development --config config/webpack.config.js",
-    "test": "jest",
-    "test-watch": "jest --watch"
-  },
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/config/setupTests.js"
-    ],
-    "moduleNameMapper": {
-      "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
-    },
-    "transform": {
-      "^.+\\.[tj]sx?$": "babel-jest"
-    },
-    "transformIgnorePatterns": [
-      "/node_modules/"
-    ]
-  },
-  "author": "",
-  "license": "ISC"
+	"name": "task_5",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest",
+		"build": "webpack build --config ./config/webpack.config.js",
+		"start": "webpack serve --config ./config/webpack.config.js",
+		"test-watch": "jest --watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.16.5",
+		"@babel/plugin-transform-runtime": "^7.16.7",
+		"@babel/preset-env": "^7.16.5",
+		"@babel/preset-react": "^7.16.5",
+		"@types/jest": "^27.4.0",
+		"@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
+		"babel-jest": "^27.4.5",
+		"babel-loader": "^8.2.3",
+		"babel-plugin-syntax-class-properties": "^6.13.0",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"css-loader": "^6.5.1",
+		"enzyme": "^3.11.0",
+		"file-loader": "^6.2.0",
+		"html-webpack-plugin": "^5.5.0",
+		"image-webpack-loader": "^8.0.1",
+		"jest": "^27.4.5",
+		"react-hot-loader": "^4.13.0",
+		"style-loader": "^3.3.1",
+		"webpack": "^5.65.0",
+		"webpack-cli": "^4.9.1",
+		"webpack-dev-server": "^4.6.0"
+	},
+	"dependencies": {
+		"@babel/runtime": "^7.16.7",
+		"prop-types": "^15.8.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"jest": {
+		"setupFiles": [
+			"<rootDir>/config/setupTests.js"
+		],
+		"moduleNameMapper": {
+			"\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+			"\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+		},
+		"transform": {
+			"\\.js$": "<rootDir>/node_modules/babel-jest"
+		}
+	}
 }
