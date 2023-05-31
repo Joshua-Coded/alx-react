@@ -1,22 +1,26 @@
-th {
-    border-bottom: 1px solid gray;
-    margin: 0;
-    padding: 0;
-    text-align: left;
+table {
+	margin-top: 2em;
+	width: 90%;
+	height: fit-content;
+	border: 1px solid #ddd;
+	font-size: 1.2rem;
+	margin-bottom: 15em;
 }
 
-th:first-child {
-    text-align: center;
+th {
+	border-bottom: 1px solid #ddd;
+}
+
+th,
+td {
+	width: 80%;
 }
 
 table {
-    width: 90%;
-    border: 1px solid gray;
-    margin: auto;
-    margin-top: 40px;
-    padding: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-td {
-    padding-left: 3px;
+tr:nth-child(2) {
+	text-align: left;
 }
