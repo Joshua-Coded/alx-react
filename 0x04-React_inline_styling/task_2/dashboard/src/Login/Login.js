@@ -1,31 +1,54 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
-function Login() {
-  return (
-    <React.Fragment>
-      <div className={css(loginStyles.appBody)}>
-        <p>Login to access the full dashboard</p>
-        <label htmlFor="email">Email: </label>
-        <input type="email" id="email" name="email" className={loginStyles.inputs} />
-        <label htmlFor="password">Password: </label>
-        <input type="password" id="password" name="password" className={loginStyles.inputs} />
-        <button>OK</button>
-      </div>
-    </React.Fragment>
-  )
-}
-
-const loginStyles = StyleSheet.create({
-	appBody: {
-    padding: '36px 24px'
-		
+const styles = StyleSheet.create({
+	'App-body': {
+		fontSize: '1.4rem',
+		padding: '1.2em',
+		height: '45%',
 	},
 
-	inputs: {
-		margin: '0 16px 0 8px'
-	}
-})
+	'form-inputs': {
+		display: 'flex',
+		gap: '2em',
+		alignItems: 'center',
+	},
 
+	input: {
+		height: '1.4rem',
+		marginLeft: '10px',
+	},
+});
+
+const Login = () => {
+	return (
+		<>
+			<div className={css(styles['App-body'])}>
+				<p>Login to access the full dashboard</p>
+				<section className={css(styles['form-inputs'])}>
+					<section className='input'>
+						<label htmlFor='email'>Email:</label>
+						<input
+							type='email'
+							name='email'
+							id='email'
+							className={css(styles.input)}
+						/>
+					</section>
+					<section className='input'>
+						<label htmlFor='password'>Password: </label>
+						<input
+							type='password'
+							name='password'
+							id='password'
+							className={css(styles.input)}
+						/>
+					</section>
+					<button>OK</button>
+				</section>
+			</div>
+		</>
+	);
+};
 
 export default Login;
